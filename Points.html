@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="JS/Vue.js"></script>
+</head>
+
+<body>
+
+
+    <div id="app">
+        {{image}}   <br>
+
+<!--        <button v-on:click="add">点击</button>-->
+        <button @click="add">点击</button>
+
+    </div>
+<script>
+    const app = new Vue({
+        el:'#app',// 声明
+        data:{    // 数据
+            image:'你好'
+        },
+        methods:{ // 方法
+            add:function () {
+                console.log(this.image);
+            }
+        }
+    })
+</script>
+</body>
+</html>
