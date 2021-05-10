@@ -1,0 +1,10 @@
+安装完成之后，在需要提交的文件夹里面右击选择 Git bash here
+1.创建SSH KEY： $ ssh-keygen -t rsa -C "注册的邮箱地址"    (一路回车)
+2.将.ssh文件夹里面的 id_rsa.pub 内容复制到 Github网页端的头像下的 Settings -> SSH and GPG keys -> new SSH key
+的 key 里面，里面的 Title 随便填
+3.初始化仓库：git init
+4.  git add .
+5.  git commit -m "修改的文件的说明"
+6.  git remote add origin 仓库地址
+7.  git push -u origin master （第一次提交的时候是空的仓库，所有用这个）
+     git push origin master（之后提交用这个）
