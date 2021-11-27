@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+	<style>
+		body{margin:0;}
+		#image_model{
+			display: flex;
+			justify-content: center;
+			align-items:center;
+		}
+		.image_model_div{width: 520px;height: 520px;}
+		.image_model_div_image{width: 100%;height: 100%}
+		
+	</style>
+<body>
+	<div id="main_container">
+		<div id="image_model"></div>
+	</div>
+</body>
+
+	<script>
+		function imageModel(){
+			const image_path = ["刻晴","魈","雷神","神里凌华"];
+			const image_model = document.getElementById("image_model");
+
+			image_path.forEach(function(value,index){
+				let image_model_div = document.createElement("div");
+				let image_model_div_ = document.createElement("div");
+				let image_model_div_image = document.createElement("img");
+
+				image_model_div.setAttribute("class","image_model_div");
+				image_model_div_.setAttribute("class","image_model_div_");
+				image_model_div_image.setAttribute("src","D:\\BianCheng\\Test\\yuanshen\\" + value + ".jpg");
+				image_model_div_image.setAttribute("class","image_model_div_image");
+
+				image_model_div_.appendChild(image_model_div_image);
+				image_model_div.appendChild(image_model_div_);
+				image_model.appendChild(image_model_div);
+			})
+		}
+
+		imageModel();
+	</script>
+</html>
